@@ -12,16 +12,16 @@ pipeline {
             }
         }
 
-        stage('npm install') { 
+        stage('npm install') {
             steps {
-                  
+                 
                 sh '''
                  ls -ltr
                  npm install
                  '''
              }
          }
-    
+   
         stage('npm build') {
             steps {
                 sh 'npm run build'
@@ -61,15 +61,10 @@ pipeline {
                         )
                         sh 'rm -rf dist-${BUILD_ID}.zip'
                     }
-                    
+                   
                 }
-                
+               
             }
         }
-    } 
-
+    }
 }
-												    }
-												    }
-
-
