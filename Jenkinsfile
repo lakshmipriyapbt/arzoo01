@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        NEXUS_URL = 'http://3.110.182.234:8081/repository/application_react/'
+        NEXUS_URL = 'http://13.201.1.143:8081/repository/application_react/'
         NEXUS_CREDENTIALS_ID = 'nexus' // ID of the stored credentials in Jenkins
     }
     stages {
@@ -40,7 +40,7 @@ pipeline {
             }
             steps {
             withSonarQubeEnv('sonar') {
-                    sh "${SCANNER_HOME}/bin/sonar-scanner -Dsonar.projectKey=react-application -Dsonar.sources=src -Dsonar.host.url=http://13.232.131.116:9000/ -Dsonar.login=sqp_3cf78ef11a74f81d85e989d7865ee0c76f468321"
+                    sh "${SCANNER_HOME}/bin/sonar-scanner -Dsonar.projectKey=react-application -Dsonar.sources=src -Dsonar.host.url=http://65.0.103.20:9000/ -Dsonar.login=sqp_3cf78ef11a74f81d85e989d7865ee0c76f468321"
                 }
             }
         }
