@@ -21,6 +21,7 @@ pipeline {
                  '''
              }
          }
+        
    
         stage('npm build'){
             steps {
